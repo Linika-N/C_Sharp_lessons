@@ -1,4 +1,7 @@
-﻿System.Console.WriteLine("Введите первое число:");
+﻿//Найти из двух чисел максимальное и минимальное
+using System;
+
+System.Console.WriteLine("Введите первое число:");
 short a=Convert.ToInt16(System.Console.ReadLine());
 System.Console.WriteLine("Введите второе число:");
 short b=Convert.ToInt16(System.Console.ReadLine());
