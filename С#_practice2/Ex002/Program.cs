@@ -1,5 +1,5 @@
 ﻿// Напишите программу, которая выводит случайное трёхзначное число и удаляет вторую цифру этого числа.
-int DeleteMiddle(){
+int DeleteMiddle(){     //Удаление второй цифры случайного числа
     int number = new Random().Next(100,1000);
     System.Console.WriteLine(number);
     int rmd = number % 10;

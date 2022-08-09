@@ -1,12 +1,12 @@
 ﻿//Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-int Prompt(string message){
+int Prompt(string message){     //Ввод числа
     System.Console.WriteLine(message);
     string value = Console.ReadLine();
     int result = int.Parse(value);
     return result;
 }
-string FindThirdNumber(int number){
+string FindThirdNumber(int number){     //Поиск третьей цифры числа
     int rmd=number;
     if (number < 100)
         return "Третьей цифры нет!";

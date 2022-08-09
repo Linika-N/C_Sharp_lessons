@@ -1,6 +1,6 @@
 ﻿// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
-int Prompt(string message){
+int Prompt(string message){     //Ввод трехзначного числа
     System.Console.WriteLine(message);
     string value = Console.ReadLine();
     int result = int.Parse(value);
@@ -9,7 +9,7 @@ int Prompt(string message){
     } else 
         return result;
 }
-int FineMiddleNumber( int result){
+int FineMiddleNumber( int result){      //Поиск второй цифры числа
     int rmd = result/10 % 10;
     return rmd;
 }
