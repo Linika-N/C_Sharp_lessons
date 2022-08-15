@@ -13,17 +13,21 @@ int[] ArrayFill(){     //Ввод массива чисел
     return arr1;
 }
 
-int[] ArraySort(int[] array){
-    for (int i=0; i <array.Length-1; i++ ){
-        if (array[i]>array[i+1]){
-            array[i]=array[i] + array[i+1];
-            array[i+1]=array[i] - array[i+1];
-            array[i]=array[i] - array[i+1];
-            i=0;
+int FindSecondMax(int[] array){
+    int max1=array[0];
+    int max2= array[1];
+    for (int i=0; i< array.Length; i++){
+        if(array[i]>max1){
+            max2 = max1;
+            max1 = array[i];
+        }
+        if (array[i]>max2 && array[i]<max1){
+            max2=array[i];
         }
     }
-    return array;
+    return max2;
 }
+
 
 void ArrayPrint(int[] array){
     for (int i= 0; i <array.Length; i++){
@@ -35,5 +39,5 @@ void ArrayPrint(int[] array){
 //Этапы выполнения задачи
 int[] arr = ArrayFill();
 ArrayPrint(arr);
-arr = ArraySort(arr);
-System.Console.WriteLine($"Второе максимальное число: {arr[arr.Length-2]}");
+int secondMax=FindSecondMax(arr);
+System.Console.WriteLine($"Второе максимальное число: {secondMax}");
