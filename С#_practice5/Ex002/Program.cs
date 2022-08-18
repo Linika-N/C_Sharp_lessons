@@ -30,6 +30,7 @@ void ArrayPrint(int[] array){       //Вывод массива в консол�
 
 
 //Ход работы программы
+Console.Clear();
 int[] arr = ArrayFill();
 ArrayPrint(arr);
 int result = SumOfElementsOnOddPosition(arr);
