@@ -6,10 +6,7 @@
 //Ход программы
 double[] arrayNumbers = Prompt("Введите по порядку через пробел значения переменных b1, k1, b2, k2");
 double[] result = FindCommonPoint(arrayNumbers);
-System.Console.WriteLine($@"Точка пересечения двух прямых, заданных уравнениями:
-                            y = {arrayNumbers[1]}x + {arrayNumbers[0]};
-                            y = {arrayNumbers[3]}x + {arrayNumbers[2]};
-({result[0]}; {result[1]})");
+ConsolePrint();
 
 // Функции
 double[] Prompt(string message)
@@ -45,3 +42,9 @@ double[] FindCommonPoint(double[] array)
     return result;
 }
 
+void ConsolePrint(){
+    System.Console.WriteLine($@"Точка пересечения двух прямых, заданных уравнениями:
+                            y = {arrayNumbers[1]}x + {arrayNumbers[0]};
+                            y = {arrayNumbers[3]}x + {arrayNumbers[2]};
+({result[0]}; {result[1]})");
+}
